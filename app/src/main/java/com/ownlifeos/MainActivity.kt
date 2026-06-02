@@ -12,6 +12,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
+        // Build the app-wide dependency graph once and pass factories into the Compose navigation tree.
         val app = application as OwnLifeApplication
         val factory = AppViewModelFactory(app.container)
 

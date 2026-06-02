@@ -15,6 +15,7 @@ import com.ownlifeos.data.repository.TaskRepository
 import com.ownlifeos.widget.WidgetSnapshotStore
 
 class AppContainer(context: Context) {
+    // Repositories share the singleton Room database so screens observe one consistent local state.
     private val database = AppDatabase.getInstance(context)
 
     val checkInRepository = CheckInRepository(database.checkInDao())
