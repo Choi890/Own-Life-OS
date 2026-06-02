@@ -12,7 +12,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        // Build the app-wide dependency graph once and pass factories into the Compose navigation tree.
+        // 애플리케이션 컨테이너에서 DB와 Repository 의존성을 가져와 ViewModelFactory를 만든다.
+        // 화면별 ViewModel은 이 factory를 통해 같은 데이터 저장소를 공유한다.
         val app = application as OwnLifeApplication
         val factory = AppViewModelFactory(app.container)
 

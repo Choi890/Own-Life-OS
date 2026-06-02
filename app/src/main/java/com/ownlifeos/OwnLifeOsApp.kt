@@ -6,6 +6,7 @@ import com.ownlifeos.ui.navigation.OwnLifeNavHost
 
 @Composable
 fun OwnLifeOsApp(factory: AppViewModelFactory) {
-    // Keep the root composable thin; feature ownership lives inside the navigation destinations.
+    // 루트 Composable은 앱의 큰 골격만 연결한다.
+    // 실제 홈, 체크인, 리포트, 태스크 화면의 로직은 OwnLifeNavHost 내부 destination들이 담당한다.
     OwnLifeNavHost(factory = factory)
 }
