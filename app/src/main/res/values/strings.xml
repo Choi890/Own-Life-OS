@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Own Life OS</string>
+    <string name="widget_description">오늘 모드와 다음 추천 액션을 표시합니다.</string>
+</resources>
